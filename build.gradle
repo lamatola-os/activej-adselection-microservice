@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'io.activej', name: 'activej-http', version: '4.3'
+    implementation group: 'io.activej', name: 'activej-inject', version: '4.3'
+    implementation group: 'io.activej', name: 'activej-common', version: '4.3'
+    implementation group: 'io.activej', name: 'activej-launcher', version: '4.3'
+    implementation group: 'io.activej', name: 'activej-launchers-http', version: '4.3'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
