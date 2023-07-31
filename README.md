@@ -1,3 +1,8 @@
+```bash
+brew install gradle@7
+
+gradle clean run
+```
 
 ```bash
 ab -n 25000 -c 100 -k http://localhost:8080/
