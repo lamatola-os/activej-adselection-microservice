@@ -7,7 +7,7 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 application {
-    mainClassName = 'MicroServer'
+    mainClassName = 'AdSelectionMicroServer'
 }
 
 repositories {
