@@ -1,8 +1,11 @@
 public class AdSelectionMicroServer {
 
     public static void main(String[] args) throws Exception {
-        AdSelectionApplication launcher = new AdSelectionApplication();
+        AdSelectionEventLoopApplication launcher = new AdSelectionEventLoopApplication();
         launcher.launch(args);
+
+//        AdSelectionSyncApplication adSelectionSyncApplication = new AdSelectionSyncApplication();
+//        adSelectionSyncApplication.launch(args);
     }
 
 }

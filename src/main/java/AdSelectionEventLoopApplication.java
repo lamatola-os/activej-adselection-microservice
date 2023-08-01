@@ -7,7 +7,7 @@ import io.activej.inject.annotation.Provides;
 import io.activej.inject.module.Module;
 import io.activej.launcher.Launcher;
 import io.activej.service.ServiceGraphModule;
-public class AdSelectionApplication extends Launcher  {
+public class AdSelectionEventLoopApplication extends Launcher  {
 
     private static final int PORT = 8081;
 
@@ -25,6 +25,7 @@ public class AdSelectionApplication extends Launcher  {
     AsyncServlet selectAds() {
         return request -> {
             try {
+                //FIXME this will cause main loop to stuck on first request, pass to second request only it finishes
                 Thread.sleep(5 * 1000);
                 return HttpResponse.ok200()
                     .withPlainText("Ad selection service");
